@@ -1,6 +1,6 @@
 import {render, screen} from '@testing-library/react';
-import {setupServer} from 'msw/node';
-import {rest} from 'msw';
+// import {setupServer} from 'msw/node';
+// import {rest} from 'msw';
 import {MemoryRouter} from 'react-router-dom';
 import HomeRoute from './HomeRoute';
 import {createServer} from '../test/server';
@@ -29,8 +29,8 @@ test('renders two links for each language', async () => {
         </MemoryRouter>
     );
 
-    await pause();
-    screen.debug();
+    // await pause();
+    // screen.debug();
     //Loop over each language
     const languages = [
         'javascript',
@@ -53,6 +53,6 @@ test('renders two links for each language', async () => {
     }
 })
 
-const pause = () => new Promise(resolve => {
-    setTimeout(resolve, 100);
-})
+// const pause = () => new Promise(resolve => {
+//     setTimeout(resolve, 100);
+// })
